@@ -22,12 +22,9 @@
     "types": [
       "vite-plugin-svgr/client"
     ],
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "src",
   },
   "include": [
-    "./src"
+    "src"
   ],
 }
