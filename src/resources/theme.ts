@@ -9,5 +9,5 @@ export const theme = {
     lightGray: '#AAAAAA',
     black: '#444444',
     green: '#3BE305',
-  }
+  },
 }
