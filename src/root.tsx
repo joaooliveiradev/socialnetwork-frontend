@@ -10,17 +10,12 @@ const Root = () => (
   </ThemeProvider>
 )
 const GlobalStyle = createGlobalStyle`
-
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto&display=swap');
-
   * {
     box-sizing: border-box;
   }
-
   html {
     font-size: 62.5%;
   }
-
   body {
     font-family: 'DM Sans', sans-serif;
     height: 100vh;
