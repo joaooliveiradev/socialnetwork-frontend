@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import svgrPlugin from 'vite-plugin-svgr'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import legacy from '@vitejs/plugin-legacy'
+import macrosPlugin from 'vite-plugin-babel-macros'
 export default defineConfig({
   plugins: [
     react(),
@@ -14,6 +15,7 @@ export default defineConfig({
     tsconfigPaths({}),
     legacy({
       targets: ['defaults']
-    })
+    }),
+    macrosPlugin(),
   ],
 })
