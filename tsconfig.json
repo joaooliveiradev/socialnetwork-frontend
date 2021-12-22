@@ -7,6 +7,7 @@
       "DOM.Iterable",
       "ESNext"
     ],
+    "incremental": true,
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
@@ -27,4 +28,5 @@
   "include": [
     "src"
   ],
+  "exclude": ["node_modules"]
 }
