@@ -1,4 +1,4 @@
-import { css, ThemeProvider, createGlobalStyle } from 'styled-components'
+import { css, ThemeProvider, createGlobalStyle } from 'styled-components/macro'
 import { App } from './app'
 import { theme } from './resources/theme'
 import 'normalize.css'
@@ -9,7 +9,7 @@ const Root = () => (
     <App />
   </ThemeProvider>
 )
-const GlobalStyle = createGlobalStyle`${({ theme }) => css`
+const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
@@ -25,5 +25,5 @@ const GlobalStyle = createGlobalStyle`${({ theme }) => css`
     height: 100%;
     display: flex;
   }
-`}`
+`
 export { Root }
