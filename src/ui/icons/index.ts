@@ -1,1 +1,1 @@
-export { ReactComponent as Logo } from './logo.svg'
+export { ReactComponent as FormSVG } from './formSVG.svg'
