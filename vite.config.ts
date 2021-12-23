@@ -7,11 +7,7 @@ import macrosPlugin from 'vite-plugin-babel-macros'
 export default defineConfig({
   plugins: [
     react(),
-    svgrPlugin({
-      svgrOptions: {
-        icon: true,
-      }
-    }),
+    svgrPlugin(),
     tsconfigPaths({}),
     legacy({
       targets: ['defaults']
