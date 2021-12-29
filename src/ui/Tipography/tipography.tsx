@@ -1,8 +1,9 @@
+import { ReactNode } from 'react'
 import styled from 'styled-components/macro'
-type validHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+type validHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
 type TitleProps = {
   headingLevel: validHeadingLevel,
-  children: string,
+  children: ReactNode,
   className?: string,
 }
 const Tipography = ({ headingLevel, className, children }: TitleProps) => {
