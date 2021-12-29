@@ -24,6 +24,13 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     display: flex;
+    padding: 4rem;
+    @media(max-width: 1024px){
+      padding: 3rem;
+    }
+     @media(max-width: 425px){
+      padding: 2rem;
+    }
   }
 `
 export { Root }
