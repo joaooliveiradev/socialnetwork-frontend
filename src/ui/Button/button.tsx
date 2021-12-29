@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 type ButtonProps = {
     children: string;
     width: string,
