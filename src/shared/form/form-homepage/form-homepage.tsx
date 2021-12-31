@@ -2,9 +2,10 @@ import { FormSVGIcon } from 'ui/icons'
 import { Logo } from 'ui/logo'
 import styled from 'styled-components/macro'
 import { ReactNode } from 'react'
-type formProps = {
+type formHomePageProps = {
   className?: string,
-  form: ReactNode,
+  titleForm?: ReactNode,
+  formElement: ReactNode
 }
 const ContainerLogo = styled.div`
   display: flex;
@@ -25,7 +26,19 @@ const ContainerSVG = styled(ContainerLogo)`
     }
   }
 `
-const FormHomepage = ({ className, form }: formProps) => {
+const ContainerForm = ({ className, formElement }: formHomePageProps) => (
+  <div className={className}>
+    {formElement}
+  </div>
+)
+const StyledContainerForm = styled(ContainerForm)`
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: form;
+`
+const FormHomepage = ({ className, titleForm, formElement }: formHomePageProps) => {
   return (
     <div className={className}>
       <ContainerLogo>
@@ -34,7 +47,7 @@ const FormHomepage = ({ className, form }: formProps) => {
       <ContainerSVG>
         <FormSVGIcon />
       </ContainerSVG>
-      {form}
+      <StyledContainerForm titleForm={titleForm} formElement={formElement} />
     </div>
   )
 }
