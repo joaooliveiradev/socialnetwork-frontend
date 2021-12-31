@@ -1,8 +1,11 @@
-import { Homepage } from 'pages/Homepage'
-
+import { Homepage } from 'pages/homepage'
+import { Routes, Route } from 'react-router-dom'
+import { Login } from 'shared/login'
 const App = () => {
   return (
-    <Homepage />
+    <Routes>
+      <Route path="/" element={<Homepage formElement={<Login />} />} />
+    </Routes>
   )
 }
 export { App }
