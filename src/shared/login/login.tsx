@@ -4,6 +4,7 @@ import { Tipography } from 'ui/tipography'
 import { Button } from 'ui/button'
 import { theme } from 'resources/theme'
 import { Link } from 'react-router-dom'
+import { MailSVG, LockSVG } from 'ui/icons'
 type FormLoginProps = {
   className?: string;
 }
@@ -11,8 +12,8 @@ const Login = ({ className }: FormLoginProps) => (
   <form className={className}>
     <Tipography headingLevel="h1">Welcome Back</Tipography>
     <Tipography headingLevel="h3">Use your credentials to access your account</Tipography>
-    <Input htmlFor="email" labelText="Your email" type="email" placeholder="name@domain.com" required />
-    <Input htmlFor="password" labelText="Password" type="password" placeholder="at least 8 characters" required />
+    <Input htmlFor="email" svg={<MailSVG />} labelText="Your email" type="email" placeholder="name@domain.com" required />
+    <Input htmlFor="password" svg={<LockSVG />} labelText="Password" type="password" placeholder="at least 8 characters" required />
     <Button width="100%" height="5rem" bgColor={theme.colors.blue}>Login</Button>
     <Tipography headingLevel="p">Not registered yet? <Link to="/signup">Create an Account</Link></Tipography>
   </form>
@@ -21,6 +22,7 @@ const StyledLogin = styled(Login)`
   display: flex;
   flex-direction: column;
   label {
+    position: relative;
     color: ${({ theme }) => theme.colors.darkPurple};
     font-size: 2rem;
     display: flex;
@@ -31,7 +33,7 @@ const StyledLogin = styled(Login)`
     margin-top: 2rem;
   }
   input {
-    padding-left: 2rem;
+    padding-left: 5rem;
   }
   input:focus{
     outline: none;
@@ -81,6 +83,12 @@ const StyledLogin = styled(Login)`
     font-style: normal;
     font-size: 1.8em;
     margin-bottom: 1em;
+  }
+  svg {
+    position: absolute;
+    top: 3rem;
+    left: 1.5rem;
+    width: 2.6rem;
   }
 `
 export { StyledLogin as Login }
