@@ -37,6 +37,26 @@ const StyledLogin = styled(Login)`
     outline: none;
     border: solid 1px ${({ theme }) => theme.colors.darkPurple};
   }
+  input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(22, 26, 58, 0.7);
+  }
+  input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    rgba(22, 26, 58, 0.7);
+    opacity:  1;
+  }
+  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    rgba(22, 26, 58, 0.7);
+    opacity:  1;
+  }
+  input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    rgba(22, 26, 58, 0.7);
+  }
+  input::-ms-input-placeholder { /* Microsoft Edge */
+    color:    rgba(22, 26, 58, 0.7);
+  }
+  input::placeholder { /* Most modern browsers support this now. */
+    color:    rgba(22, 26, 58, 0.7);
+  }
   button {
     margin-top: 2rem;
   }
