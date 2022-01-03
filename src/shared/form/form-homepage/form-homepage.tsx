@@ -25,6 +25,16 @@ const ContainerSVG = styled(ContainerLogo)`
       height: 32rem;
     }
   }
+  @media(max-width: 425px){
+    svg {
+      height: 30rem;
+    }
+  }
+  @media(max-width: 320px){
+    svg {
+      height: 24rem;
+    }
+  }
 `
 const ContainerForm = ({ className, formElement }: formHomePageProps) => (
   <div className={className}>
@@ -37,6 +47,9 @@ const StyledContainerForm = styled(ContainerForm)`
   justify-content: center;
   align-items: center;
   grid-area: form;
+  @media(max-width: 1024px) {
+    padding: 0 2rem;
+  }
 `
 const FormHomepage = ({ className, titleForm, formElement }: formHomePageProps) => {
   return (
@@ -64,8 +77,9 @@ const StyledFormHomepage = styled(FormHomepage)`
   grid-template-areas:'logoForm logoForm'
                       'svgForm form';
   @media(max-width: 1024px) {
+    height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-template-areas:'svgForm'
                         'form';
   }
