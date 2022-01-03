@@ -1,2 +1,5 @@
 export { ReactComponent as FormSVGIcon } from './formSVG.svg'
 export { ReactComponent as LogoSVG } from './logo.svg'
+export { ReactComponent as UserSVG } from './user.svg'
+export { ReactComponent as MailSVG } from './mail.svg'
+export { ReactComponent as LockSVG } from './lock.svg'
