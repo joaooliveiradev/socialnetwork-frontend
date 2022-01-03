@@ -14,6 +14,7 @@ const Login = ({ className }: FormLoginProps) => (
     <Tipography headingLevel="h3">Use your credentials to access your account</Tipography>
     <Input htmlFor="email" svg={<MailSVG />} labelText="Your email" type="email" placeholder="name@domain.com" required />
     <Input htmlFor="password" svg={<LockSVG />} labelText="Password" type="password" placeholder="at least 8 characters" required />
+    <Link className="forgot" to="/forgot">Forgot password?</Link>
     <Button width="100%" height="5rem" bgColor={theme.colors.blue}>Login</Button>
     <Tipography headingLevel="p">Not registered yet? <Link to="/signup">Create an Account</Link></Tipography>
   </form>
@@ -59,9 +60,6 @@ const StyledLogin = styled(Login)`
   input::placeholder { /* Most modern browsers support this now. */
     color:    rgba(22, 26, 58, 0.7);
   }
-  button {
-    margin-top: 2.5rem;
-  }
   a {
     margin: 1rem 0rem;
     font-size: 1.8rem;
@@ -89,6 +87,10 @@ const StyledLogin = styled(Login)`
     top: 3rem;
     left: 1.5rem;
     width: 2.6rem;
+  }
+  .forgot {
+    margin: 2rem 0rem;
+    text-align: right;
   }
 `
 export { StyledLogin as Login }
