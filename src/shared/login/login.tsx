@@ -81,7 +81,6 @@ const StyledLogin = styled(Login)`
     font-style: normal;
     font-size: 1.8em;
     margin-bottom: 1em;
-    padding-top: 1rem;
   }
 `
 export { StyledLogin as Login }
