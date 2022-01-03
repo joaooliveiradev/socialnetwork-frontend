@@ -58,7 +58,7 @@ const StyledLogin = styled(Login)`
     color:    rgba(22, 26, 58, 0.7);
   }
   button {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   a {
     margin: 1rem 0rem;
