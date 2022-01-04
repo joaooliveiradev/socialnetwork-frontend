@@ -2,7 +2,6 @@ import styled from 'styled-components/macro'
 import { Tipography } from 'ui/tipography'
 import { Input } from 'ui/input'
 import { Button } from 'ui/button'
-import { theme } from 'resources/theme'
 import { Link } from 'react-router-dom'
 import { UserSVG, MailSVG, LockSVG } from 'ui/icons'
 type SignUpProps = {
@@ -15,7 +14,7 @@ const SignUp = ({ className }: SignUpProps) => (
     <Input htmlFor="name" svg={<UserSVG />} type="input" labelText="Full Name" placeholder="John Doe" required={true} />
     <Input htmlFor="email" svg={<MailSVG />} type="email" labelText="Email address" placeholder="name@domain.com" required={true} />
     <Input htmlFor="password" svg={<LockSVG />} type="password" labelText="Password" placeholder="at least 8 characters" required={true} />
-    <Button width="100%" height="5rem" bgColor={theme.colors.blue}>Sign Up</Button>
+    <Button width="100%" height="5rem" bgColor="#0099FF">Sign Up</Button>
     <Tipography headingLevel="p">Already have an account? <Link to="/">Login</Link></Tipography>
   </form>
 )
