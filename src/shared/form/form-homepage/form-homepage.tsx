@@ -29,7 +29,10 @@ const ContainerForm = ({ className, formElement }: formHomePageProps) => (
 )
 const StyledContainerForm = styled(ContainerForm)`
   display: flex;
-  height: 50rem;
+  height: auto;
+  @media(max-width: 1024px) {
+    height: 50rem;
+  }
   justify-content: center;
   align-items: center;
   grid-area: form;
