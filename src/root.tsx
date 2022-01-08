@@ -15,22 +15,17 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
+    height: 100%;
   }
   body {
     font-family: 'DM Sans', sans-serif;
-    height: 100vh;
+    height: 100%;
   }
   [data-js="app"]{
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 4rem;
-    @media(max-width: 1024px){
-      padding: 3rem;
-    }
-     @media(max-width: 425px){
-      padding: 2rem;
-    }
+    padding: 5rem;
   }
 `
 export { Root }

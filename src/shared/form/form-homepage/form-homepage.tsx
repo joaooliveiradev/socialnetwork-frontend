@@ -19,21 +19,7 @@ const ContainerLogo = styled.div`
 const ContainerSVG = styled(ContainerLogo)`
   grid-area: svgForm;
   @media(max-width: 1024px) {
-    display: flex;
-    svg {
-      width: 100%;
-      height: 32rem;
-    }
-  }
-  @media(max-width: 425px){
-    svg {
-      height: 30rem;
-    }
-  }
-  @media(max-width: 320px){
-    svg {
-      height: 24rem;
-    }
+    display: none;
   }
 `
 const ContainerForm = ({ className, formElement }: formHomePageProps) => (
@@ -42,14 +28,12 @@ const ContainerForm = ({ className, formElement }: formHomePageProps) => (
   </div>
 )
 const StyledContainerForm = styled(ContainerForm)`
-  padding: 2rem;
   display: flex;
+  height: 50rem;
   justify-content: center;
   align-items: center;
   grid-area: form;
-  @media(max-width: 1024px) {
-    padding: 0 2rem;
-  }
+  margin: 2.5rem;
 `
 const FormHomepage = ({ className, titleForm, formElement }: formHomePageProps) => {
   return (
@@ -77,11 +61,11 @@ const StyledFormHomepage = styled(FormHomepage)`
   grid-template-areas:'logoForm logoForm'
                       'svgForm form';
   @media(max-width: 1024px) {
+    grid-template: 1fr / 1fr;
+    grid-template-areas: 'form';
     height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    grid-template-areas:'svgForm'
-                        'form';
+    width: auto;
+    margin: 2rem
   }
   `
 export { StyledFormHomepage as FormHomepage }
