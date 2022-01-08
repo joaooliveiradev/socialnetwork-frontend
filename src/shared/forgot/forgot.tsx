@@ -3,6 +3,7 @@ import { Tipography } from 'ui/tipography'
 import { Input } from 'ui/input'
 import { Button } from 'ui/button'
 import { MailSVG } from 'ui/icons'
+import { Link } from 'react-router-dom'
 type ForgotProps = {
   className?: string,
 }
@@ -11,17 +12,14 @@ const Forgot = ({ className }: ForgotProps) => (
   <form className={className}>
     <Tipography headingLevel="h1">Forgot Password?</Tipography>
     <Tipography headingLevel='h3'>Don’t worry! It happens. Please enter the address associated with your account.</Tipography>
-    <Input type="email" htmlFor="email" labelText="Your email" svg={<MailSVG />} placeholder="name@domain.com" required={true} />
-    <Button width="100%" height="5rem" bgColor="#0099FF">Send Instructions</Button>
+    <Input type="email" htmlFor="email" labelText="Your email" svg={<MailSVG />} placeholder="name@domain.com" required />
+    <Button width="100%" height="5rem" bgColor="#0099FF"><Link to="/verification">Send Instructions</Link></Button>
   </form>
 )
 const StyledForgot = styled(Forgot)`
   display: flex;
   flex-direction: column;
-  width: 35rem;
-  @media(max-width: 425px){
-    width: auto;
-  }
+  width: auto;
   label {
     display: flex;
     flex-direction: column;
@@ -57,21 +55,21 @@ const StyledForgot = styled(Forgot)`
     color: rgba(22, 26, 58, 0.7);
   }
   input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    rgba(22, 26, 58, 0.7);
+    color: rgba(22, 26, 58, 0.7);
     opacity:  1;
   }
   input::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    rgba(22, 26, 58, 0.7);
+    color: rgba(22, 26, 58, 0.7);
     opacity:  1;
   }
   input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:    rgba(22, 26, 58, 0.7);
+    color:rgba(22, 26, 58, 0.7);
   }
   input::-ms-input-placeholder { /* Microsoft Edge */
-    color:    rgba(22, 26, 58, 0.7);
+    color: rgba(22, 26, 58, 0.7);
   }
   input::placeholder { /* Most modern browsers support this now. */
-    color:    rgba(22, 26, 58, 0.7);
+    color: rgba(22, 26, 58, 0.7);
   }
   svg {
     position: absolute;
@@ -80,7 +78,11 @@ const StyledForgot = styled(Forgot)`
     width: 2.6rem;
   }
   button {
-    margin: 3rem 0;
+    margin: 2.5rem 0;
+  }
+  a {
+    color: ${({ theme }) => theme.colors.white};
+    text-decoration: none;
   }
 `
 
