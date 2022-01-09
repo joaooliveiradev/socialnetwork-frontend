@@ -42,7 +42,7 @@ const FormHomepage = ({ className, titleForm, formElement }: formHomePageProps) 
   return (
     <div className={className}>
       <ContainerLogo>
-        <Logo width='512' height='512' />
+        <Logo href="./" width='512' height='512' />
       </ContainerLogo>
       <ContainerSVG>
         <FormSVGIcon />
