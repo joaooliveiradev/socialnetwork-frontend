@@ -8,11 +8,11 @@ type VerificationProps = {
 }
 // TODO: Logic to verify and pass to the reset component
 const Verification = ({ className }: VerificationProps) => (
-  <form className={className} action="/fodase">
+  <form className={className}>
     <Tipography headingLevel="h1">Verification</Tipography>
     <Tipography headingLevel="h3">Enter the verification code we just send you on your email address.</Tipography>
     <FormVerification />
-    <Tipography headingLevel="p">Didn’t receive the code?<br /><button className='resendButton'>Resend in 30 seconds</button></Tipography>
+    <Tipography headingLevel="p">Didn’t receive the code?<br /><button type="button" className='resendButton'>Resend in 30 seconds</button></Tipography>
     <Button width="100%"><Link to="/reset">Verify Account</Link></Button>
   </form>
 )
