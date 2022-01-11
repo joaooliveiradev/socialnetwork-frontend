@@ -1,10 +1,12 @@
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
-
+import { Root } from './root'
+import { BrowserRouter } from 'react-router-dom'
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
+  <StrictMode>
+    <BrowserRouter>
+      <Root />
+    </BrowserRouter>
+  </StrictMode>,
+  document.querySelector('[data-js="app"]'),
 )
