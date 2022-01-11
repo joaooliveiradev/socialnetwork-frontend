@@ -11,9 +11,10 @@ const Reset = ({ className }: ResetProps) => (
   <form className={className}>
     <Tipography headingLevel="h1">Create a new password</Tipography>
     <Tipography headingLevel="h3">Your new password must be different from previous used passwords.</Tipography>
-    <Input type="password" svg={<LockSVG />} htmlFor="password" labelText="New password" placeholder="New password" required/>
-    <Input type="password" svg={<LockSVG />} htmlFor="password" labelText="Confirm password" placeholder="Confirm password" required/>
-    <Button>Reset password</Button>
+    <Input type="password" svg={<LockSVG />} htmlFor="password" labelText="New password" placeholder="New password" required />
+    <Input type="password" svg={<LockSVG />} htmlFor="password" labelText="Confirm password" placeholder="Confirm password" required />
+    <Button>Verify Account</Button>
+    {/* TODO: Message when submit fails and when submit is ok shows an loading and redirect to Login */}
   </form>
 )
 const StyledReset = styled(Reset)`
@@ -76,7 +77,7 @@ const StyledReset = styled(Reset)`
   a {
     margin: 1rem 0rem;
     font-size: 1.8rem;
-    color: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
   }
   svg {
