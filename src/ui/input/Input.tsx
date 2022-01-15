@@ -8,12 +8,14 @@ type InputProps = {
   labelText: string,
   required: boolean,
   placeholder: string,
+  minLength?: number,
+  maxLength?: number,
 }
-const Input = ({ className, svg, type, htmlFor, labelText, placeholder, required }: InputProps) => (
+const Input = ({ className, svg, type, htmlFor, labelText, placeholder, required, minLength, maxLength }: InputProps) => (
   <label htmlFor={htmlFor}>
     {labelText}
     {svg}
-    <input className={className} type={type} required={required} placeholder={placeholder} autoComplete="off" />
+    <input className={className} type={type} required={required} placeholder={placeholder} autoComplete="off" minLength={minLength} maxLength={maxLength} />
   </label>
 )
 const StyledInput = styled(Input)`
